@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyliih6t743d6"]
+
+[ext_resource type="Texture2D" uid="uid://dovahbvu3fihs" path="res://icon.svg" id="1_d08es"]
+[ext_resource type="Script" path="res://invest_button.gd" id="2_mxk1x"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 132.0
+offset_bottom = 194.0
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_d08es")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer"]
+layout_mode = 2
+text = "Test"
+fit_content = true
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "button"
+script = ExtResource("2_mxk1x")
+
+[connection signal="pressed" from="GridContainer/Button" to="GridContainer/Button" method="_on_pressed"]
