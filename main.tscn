@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bijjuuw0j332h"]
 
-[ext_resource type="PackedScene" uid="uid://cyliih6t743d6" path="res://investment.tscn" id="1_tii00"]
+[ext_resource type="PackedScene" uid="uid://cisdlk5h0jusc" path="res://investment_options.tscn" id="1_a5b4d"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -10,5 +10,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" parent="." instance=ExtResource("1_tii00")]
+[node name="InvestmentOptions" parent="." instance=ExtResource("1_a5b4d")]
 layout_mode = 1

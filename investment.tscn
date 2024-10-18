@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://invest_button.gd" id="2_mxk1x"]
 
 [node name="Control" type="Control"]
+custom_minimum_size = Vector2(128, 200)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +25,8 @@ texture = ExtResource("1_d08es")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer"]
 layout_mode = 2
-text = "Test"
+bbcode_enabled = true
+text = "BBCode [color=green]test[/color]"
 fit_content = true
 
 [node name="Button" type="Button" parent="GridContainer"]
