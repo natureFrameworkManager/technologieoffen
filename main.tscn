@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bijjuuw0j332h"]
+[gd_scene load_steps=3 format=3 uid="uid://bijjuuw0j332h"]
 
 [ext_resource type="PackedScene" uid="uid://cisdlk5h0jusc" path="res://investment_options.tscn" id="1_a5b4d"]
+[ext_resource type="Script" path="res://main.gd" id="1_plnum"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -9,8 +10,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_plnum")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_direction = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,5 +21,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="InvestmentOptions" parent="CenterContainer" instance=ExtResource("1_a5b4d")]
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="InvestmentOptions" parent="HBoxContainer/CenterContainer" instance=ExtResource("1_a5b4d")]
+layout_mode = 2
+
+[node name="InvestmentList" type="VBoxContainer" parent="HBoxContainer"]
+layout_direction = 2
 layout_mode = 2

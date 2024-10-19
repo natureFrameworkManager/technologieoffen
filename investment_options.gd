@@ -47,7 +47,9 @@ func get_options():
 		hbc.add_child(investment)
 	game_cycle =+ 1
 
+signal invested(price, revenue)
+
 func reroll(price, revenue):
-	print("uwu -- %s" % price)
+	invested.emit(price,revenue)
 	remove_child(get_node("hbc"))
 	get_options()
